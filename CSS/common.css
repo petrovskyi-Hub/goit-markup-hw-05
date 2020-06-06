@@ -78,25 +78,13 @@ body {
   margin-left: 10px;
 }
 
-/* .send-button::after {
-  display: inline-flex;
-  content: "";
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-image: url(../images/icon-send.svg);
-} */
-
 /* Header */
 .page-header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 999;
 
   background-color: var(--primary-white-color);
 }
@@ -121,11 +109,6 @@ body {
 .logo-accent {
   color: var(--accent-color);
 }
-
-/* .logo:hover,
-.logo:focus {
-  color: var(--accent-color); 
-} */
 
 /* Site nav */
 .site-nav {
@@ -162,6 +145,8 @@ body {
 
   text-decoration: none;
   font-style: normal;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav__link:hover,
@@ -206,20 +191,14 @@ body {
 .contacts__link {
   display: inline-flex;
   align-items: center;
+
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* .contacts__link::before {
-  content: "";
-
-  margin-right: 10px;
-
-  background-repeat: no-repeat;
-  background-position: center right;
-} */
 
 .contacts__link:hover,
 .contacts__link:focus {
@@ -230,18 +209,6 @@ body {
   fill: currentColor;
   margin-right: 10px;
 }
-
-/* .icon-envelope::before {
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/envelope.svg);
-}
-
-.icon-smartphone::before {
-  width: 10px;
-  height: 16px;
-  background-image: url(../images/smartphone.svg);
-} */
 
 /* Footer */
 
@@ -281,10 +248,8 @@ body {
   margin-top: 9px;
 
   color: var(--footer-link-color);
-}
 
-.footer .social .link {
-  color: var(--footer-link-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address .link:hover,
@@ -328,9 +293,12 @@ body {
   color: var(--primary-white-color);
   background-color: var(--social-link-bg-color);
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-list__link:hover {
+.social-list__link:hover,
+.social-list__link:focus {
   background-color: var(--accent-color);
 }
 
